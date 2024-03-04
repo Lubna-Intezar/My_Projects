@@ -3,11 +3,7 @@
 import pandas as pd
 import spacy
 from textblob import TextBlob
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Table, TableStyle
-from reportlab.lib.styles import getSampleStyleSheet
-import fpdf
+
 
 
 # Download the spaCy model (if not already downloaded)
@@ -41,8 +37,8 @@ def preprocess_text(text):
 # Step 2: Define a function for sentiment analysis using TextBlob
 def analyze_sentiment(text):
     """
-    This function analyzes the sentiment of the text using TextBlob.
-    """
+        This function analyzes the sentiment of the text using TextBlob.
+        """
     # Perform sentiment analysis using TextBlob
     sentiment = TextBlob(text).sentiment
     # Classify sentiment based on polarity score
@@ -59,6 +55,6 @@ def analyze_sentiment(text):
 # Step 3: Print sample reviews with sentiment analysis
 sample_reviews = ["This product is amazing!", "I am very disappointed with this product.", "It's okay, I guess."]
 for review in sample_reviews:
-    sentiment = analyze_sentiment(review)
-    print(f"Review: {review} - Sentiment: {sentiment}")
+        sentiment = analyze_sentiment(review)
+        print(f"Review: {review} - Sentiment: {sentiment}")
 
