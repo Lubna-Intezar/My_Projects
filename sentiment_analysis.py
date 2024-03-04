@@ -36,21 +36,21 @@ def preprocess_text(text):
 
 # Step 2: Define a function for sentiment analysis using TextBlob
 def analyze_sentiment(text):
-    """
-        This function analyzes the sentiment of the text using TextBlob.
         """
-    # Perform sentiment analysis using TextBlob
-    sentiment = TextBlob(text).sentiment
-    # Classify sentiment based on polarity score
-    if sentiment.polarity > 0:
-        return "positive"
-    elif sentiment.polarity < 0:
-        return "negative"
-    else:
-        return "neutral"
+            This function analyzes the sentiment of the text using TextBlob.
+            """
+        # Perform sentiment analysis using TextBlob
+        sentiment = TextBlob(text).sentiment
+        # Classify sentiment based on polarity score
+        if sentiment.polarity > 0:
+            return "positive"
+        elif sentiment.polarity < 0:
+            return "negative"
+        else:
+            return "neutral"
 
-    # Apply sentiment analysis to the "cleaned_text" column and create a new column
-    data["sentiment"] = data["cleaned_text"].apply(analyze_sentiment)
+        # Apply sentiment analysis to the "cleaned_text" column and create a new column
+        data["sentiment"] = data["cleaned_text"].apply(analyze_sentiment)
 
 # Step 3: Print sample reviews with sentiment analysis
 sample_reviews = ["This product is amazing!", "I am very disappointed with this product.", "It's okay, I guess."]
