@@ -1,12 +1,13 @@
-Report:
 
 Sentiment Analysis Report
+
 Dataset Description:
 The dataset contains product reviews from Amazon.
 
 Preprocessing Steps:
 1. Loaded the dataset and selected the 'reviews.text' column.
 2. Removed missing values from the selected column.
+3.Text data was preprocessed by removing stopwords and basic cleaning using spaCy
 
 Evaluation of Results:
 - Tested the sentiment analysis model on sample product reviews.
